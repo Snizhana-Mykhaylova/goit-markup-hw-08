@@ -936,36 +936,6 @@ img {
   fill: #2196f3;
 }
 
-.clients__logo-1 {
-  width: 44px;
-  height: 50px;
-}
-
-.clients__logo-2 {
-  width: 40px;
-  height: 52px;
-}
-
-.clients__logo-3 {
-  width: 41px;
-  height: 43px;
-}
-
-.clients__logo-4 {
-  width: 80px;
-  height: 42px;
-}
-
-.clients__logo-5 {
-  width: 59px;
-  height: 47px;
-}
-
-.clients__logo-6 {
-  width: 88px;
-  height: 45px;
-}
-
 .footer {
   background-color: #2f303a;
   line-height: 1.71;
@@ -1294,6 +1264,11 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
@@ -1308,16 +1283,17 @@ img {
 }
 
 .card__hover-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   margin: 0;
-  width: 322px;
-  height: 168px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.56;
+  font-weight: 400;
   color: #ffffff;
+}
+
+@media (min-width: 480px) {
+  .card__hover-text {
+    font-size: 18px;
+  }
 }
 
 .card__text-content {
@@ -1515,21 +1491,28 @@ img {
 }
 
 .form__checkbox-label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
 }
 
-@media (max-width: 1199px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .form__checkbox-label {
-    font-size: 12px;
-    line-height: 1.16;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form__checkbox-label {
+    font-size: 14px;
+    line-height: inherit;
   }
 }
 
 .form__checkbox-check {
-  display: block;
+  display: inline-block;
   width: 16px;
   height: 15px;
   margin-right: 8px;

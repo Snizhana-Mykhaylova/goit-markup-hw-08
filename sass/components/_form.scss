@@ -94,19 +94,24 @@
 }
 
 .form__checkbox-label {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	line-height: 1.71;
+	font-size: 12px;
+	line-height: 1.16;
 
-	@include for-size(mobile-tablet-only) {
-		font-size: 12px;
-		line-height: 1.16;
+	@media screen and (min-width: 480px) and (max-width: 1199px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@include for-size(desktop) {
+		font-size: 14px;
+		line-height: inherit;
 	}
 }
 
 .form__checkbox-check {
-	display: block;
+	display: inline-block;
 	width: 16px;
 	height: 15px;
 	margin-right: 8px;
